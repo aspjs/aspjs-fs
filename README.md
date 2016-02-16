@@ -6,9 +6,9 @@
 <!--#INCLUDE VIRTUAL="/aspjs_modules/fs/index.asp"-->
 <%
 
-var fs = require('fs');
+var fs = require("fs");
 
-fs.readFile('/test.json', function(err, data) {
+fs.readFile("/test.json", function(err, data) {
 	// ... error checks
 	
 	console.log(data);
