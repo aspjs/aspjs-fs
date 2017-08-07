@@ -1,8 +1,6 @@
 <%
 
 define('fs', function(require, exports, module) {
-	var util = require('util');
-
 	module.exports = {
 		readdir: function readdir(path, done) {
 			var error, files;
@@ -14,7 +12,7 @@ define('fs', function(require, exports, module) {
 				error = ex;
 			};
 			
-			util.defer(done, error, files);
+			done(error, files);
 			
 			return this;
 		},
@@ -59,7 +57,7 @@ define('fs', function(require, exports, module) {
 				error = ex;
 			};
 			
-			util.defer(done, error, data);
+			done(error, data);
 			
 			return this;
 		},
@@ -109,7 +107,7 @@ define('fs', function(require, exports, module) {
 				error = ex;
 			};
 			
-			util.defer(done, error, info);
+			done(error, info);
 			
 			return this;
 		},
@@ -159,7 +157,7 @@ define('fs', function(require, exports, module) {
 				error = ex;
 			};
 			
-			util.defer(done, error);
+			done(error);
 			
 			return this;
 		},
@@ -214,7 +212,7 @@ define('fs', function(require, exports, module) {
 				error = ex;
 			};
 			
-			util.defer(done, error);
+			done(error);
 			
 			return this;
 		},
